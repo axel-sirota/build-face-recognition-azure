@@ -29,23 +29,24 @@ def pretty_print(klass, indent=0):
 
 subscription_key = os.environ["AZURE_COMPUTER_VISION_SUBSCRIPTION_KEY"]
 endpoint = os.environ["AZURE_COMPUTER_VISION_ENDPOINT"]
+large_person_group_id = "business"
 
 face_client = FaceClient(endpoint, CognitiveServicesCredentials(subscription_key))
 
-face_client.large_person_group.create(large_person_group_id='1', name='businesspeople')
+face_client.large_person_group.create(large_person_group_id=large_person_group_id, name='businesspeople')
 for person_file in os.listdir("faces"):
     person_name = person_file.split(".")[0]
-    person = face_client.large_person_group_person.create(large_person_group_id='1', name=person_name)
+    person = face_client.large_person_group_person.create(large_person_group_id=large_person_group_id, name=person_name)
     for image_url in open(f"faces/{person_file}", 'r').readlines():
-        face_client.large_person_group_person.add_face_from_url(large_person_group_id='1',
+        face_client.large_person_group_person.add_face_from_url(large_person_group_id=large_person_group_id,
                                                                 person_id=person.person_id,
                                                                 url=image_url)
-for person in face_client.large_person_group_person.list(large_person_group_id='1'):
+for person in face_client.large_person_group_person.list(large_person_group_id=large_person_group_id):
     pretty_print(person)
 
-face_client.large_person_group.train(large_person_group_id='1')
+face_client.large_person_group.train(large_person_group_id=large_person_group_id)
 for i in range(10):
-    response = face_client.large_person_group.get_training_status(large_person_group_id='1')
+    response = face_client.large_person_group.get_training_status(large_person_group_id=large_person_group_id)
     if response.status != TrainingStatusType.succeeded:
         time.sleep(5)
     else:

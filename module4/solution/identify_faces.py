@@ -28,10 +28,11 @@ def pretty_print(klass, indent=0):
 
 subscription_key = os.environ["AZURE_COMPUTER_VISION_SUBSCRIPTION_KEY"]
 endpoint = os.environ["AZURE_COMPUTER_VISION_ENDPOINT"]
+large_person_group_id = "business"
 
 face_client = FaceClient(endpoint, CognitiveServicesCredentials(subscription_key))
 
-person_list = face_client.large_person_group_person.list(large_person_group_id='1')
+person_list = face_client.large_person_group_person.list(large_person_group_id=large_person_group_id)
 person_map = {}
 for person in person_list:
     person_map[person.person_id] = person.name
@@ -42,8 +43,8 @@ for file in os.listdir('test'):
         pretty_print(f'URL: {url}', 2)
         faces_detected = face_client.face.detect_with_url(url=url, detection_model='detection_03')
         for face in faces_detected:
-            face_id = face.person1_face_id
-            response = face_client.face.identify(face_ids=[face_id], large_person_group_id='1')
+            face_id = face.face_id
+            response = face_client.face.identify(face_ids=[face_id], large_person_group_id=large_person_group_id)
             person_id_recognized = response[0].candidates[0].person_id if len(response[0].candidates) > 0 else None
             if person_id_recognized:
                 pretty_print(f'Person: {person_map[person_id_recognized]} was recognized', 4)
