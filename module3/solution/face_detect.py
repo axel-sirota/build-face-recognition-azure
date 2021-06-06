@@ -26,15 +26,16 @@ endpoint = os.environ["AZURE_COMPUTER_VISION_ENDPOINT"]
 
 face_client = FaceClient(endpoint, CognitiveServicesCredentials(subscription_key))
 
-single_face_image_url = 'https://image.shutterstock.com/image-photo/attractive-aged-businesswoman-teacher-mentor-600w-1043108527.jpg'
+face_image_url = 'https://image.shutterstock.com/image-photo/attractive-aged-businesswoman-teacher-mentor-600w-1043108527.jpg'
 
-detected_faces = face_client.face.detect_with_url(url=single_face_image_url, return_face_landmarks=True,
+detected_faces = face_client.face.detect_with_url(url=face_image_url)
+print('Detected faces from image:')
+for face in detected_faces:
+    pretty_print(face)
+
+detected_faces = face_client.face.detect_with_url(url=face_image_url, return_face_landmarks=True,
                                                   return_face_attributes=['Age', 'Gender', 'HeadPose', 'Emotion',
                                                                           'Glasses', 'Hair'])
 print('Detected faces from image:')
 for face in detected_faces:
-    print(f'Face ID: {face.face_id}\n')
-    print(f'Face Rectangle: {face.face_rectangle}\n')
-    print(f'Face Attributes: {pretty_print(face.face_attributes)}\n')
-    print(f'Face Landmarks: {pretty_print(face.face_landmarks)}\n')
-    print('\n')
+    pretty_print(face)
