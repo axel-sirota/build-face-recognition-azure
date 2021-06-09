@@ -26,7 +26,7 @@ endpoint = os.environ["AZURE_COMPUTER_VISION_ENDPOINT"]
 
 face_client = FaceClient(endpoint, CognitiveServicesCredentials(subscription_key))
 
-face_image_url = 'https://image.shutterstock.com/image-photo/attractive-aged-businesswoman-teacher-mentor-600w-1043108527.jpg'
+face_image_url = 'https://raw.githubusercontent.com/axel-sirota/build-face-recognition-azure/main/images/business.jpeg'
 
 detected_faces = face_client.face.detect_with_url(url=face_image_url)
 print('Detected faces from image:')

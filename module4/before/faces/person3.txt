@@ -1,2 +1,2 @@
-https://image.shutterstock.com/image-photo/smiling-doctor-patient-discussing-something-600w-1415180963.jpg
-https://image.shutterstock.com/image-photo/smiling-doctor-patient-discussing-something-600w-1413461390.jpg
+https://raw.githubusercontent.com/axel-sirota/build-face-recognition-azure/main/images/person3_1.jpeg
+https://raw.githubusercontent.com/axel-sirota/build-face-recognition-azure/main/images/person3_2.jpeg

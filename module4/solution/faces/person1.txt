@@ -1,5 +1,5 @@
-https://image.shutterstock.com/image-photo/portrait-young-beautiful-business-woman-600w-1549205852.jpg
-https://image.shutterstock.com/image-photo/portrait-young-beautiful-business-woman-600w-1547975789.jpg
-https://image.shutterstock.com/image-photo/businesswoman-using-his-tablet-office-600w-1557305678.jpg
-https://image.shutterstock.com/image-photo/businesswoman-using-his-tablet-office-600w-1557424346.jpg
-https://image.shutterstock.com/image-photo/portrait-young-beautiful-business-woman-600w-1557375554.jpg
+https://raw.githubusercontent.com/axel-sirota/build-face-recognition-azure/main/images/person1_1.jpeg
+https://raw.githubusercontent.com/axel-sirota/build-face-recognition-azure/main/images/person1_2.jpeg
+https://raw.githubusercontent.com/axel-sirota/build-face-recognition-azure/main/images/person1_3.jpeg
+https://raw.githubusercontent.com/axel-sirota/build-face-recognition-azure/main/images/person1_4.jpeg
+https://raw.githubusercontent.com/axel-sirota/build-face-recognition-azure/main/images/person1_5.jpeg

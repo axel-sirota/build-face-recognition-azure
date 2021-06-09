@@ -24,4 +24,4 @@ def pretty_print(klass, indent=0):
 subscription_key = os.environ["AZURE_COMPUTER_VISION_SUBSCRIPTION_KEY"]
 endpoint = os.environ["AZURE_COMPUTER_VISION_ENDPOINT"]
 
-face_image_url = 'https://image.shutterstock.com/image-photo/attractive-aged-businesswoman-teacher-mentor-600w-1043108527.jpg'
+face_image_url = 'https://raw.githubusercontent.com/axel-sirota/build-face-recognition-azure/main/images/business.jpeg'

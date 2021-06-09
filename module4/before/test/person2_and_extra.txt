@@ -1,1 +1,1 @@
-https://image.shutterstock.com/image-photo/businessman-businesswoman-celebrating-success-office-600w-1509039497.jpg
+https://raw.githubusercontent.com/axel-sirota/build-face-recognition-azure/main/images/no_person.jpeg
