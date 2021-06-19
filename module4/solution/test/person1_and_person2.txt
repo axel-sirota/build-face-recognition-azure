@@ -1,3 +1,2 @@
 https://raw.githubusercontent.com/axel-sirota/build-face-recognition-azure/main/images/person1_and_person2.jpeg
 https://raw.githubusercontent.com/axel-sirota/build-face-recognition-azure/main/images/person1_and_person2_2.jpeg
-

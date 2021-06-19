@@ -55,4 +55,4 @@ for i in range(10):
 
 print('Done')
 
-# face_client.large_person_group.delete(large_person_group_id='1')
+# face_client.large_person_group.delete(large_person_group_id='businesspeople')
